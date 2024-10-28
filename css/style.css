@@ -38,6 +38,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-bar .btn{
@@ -50,4 +51,32 @@ main{
     border: none;
     border-radius: 10px;
     font-size: 1rem;
+}
+
+.hero {
+    position: relative;
+    inline-size: 100vw;
+    block-size: 100vh;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    inline-size: 100vw;
+    block-size: 100vh;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.568) 10%,  
+    rgba(100, 100, 100, 0.5) 50%,    
+    rgba(0, 0, 0, 0.8) 90%           
+);
+    backdrop-filter: blur(2px); 
+    pointer-events: none;
+}
+
+.hero video {
+    width: 100%;
 }
