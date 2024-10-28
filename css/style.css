@@ -1,9 +1,13 @@
 :root{
-    --primary-900: #17252A;
-    --primary-700: #2b7a78;
-    --primary-500: #3aafa9;
-    --primary-300: #def2f1;
-    --primary-100: #feffff;
+    --primary-900: #687864;
+    --primary-700: #31808e;
+    --primary-500: #5085a5;
+    --primary-300: #8fc1e3;
+    --primary-100: #f7f9fb;
+
+    --secondary-900: #000000;
+    --secondary-700: #242424;
+    --secondary-500: #4b4b4b;
 }
 
 *{
@@ -16,7 +20,7 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: var(--primary-500);
+    background-color: var(--primary-100);
 }
 
 main{
@@ -40,7 +44,7 @@ main{
     max-inline-size: max-content;
     inline-size: 100%;
     padding: 10px 40px;
-    background-color: var(--primary-900);
+    background-color: var(--secondary-900);
     color: var(--primary-100);
     outline: none;
     border: none;
