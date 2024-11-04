@@ -1,13 +1,15 @@
 :root{
-    --primary-900: #687864;
-    --primary-700: #31808e;
-    --primary-500: #5085a5;
-    --primary-300: #8fc1e3;
-    --primary-100: #f7f9fb;
+    --primary-900: #0a122a;
+    --primary-700: #06bcc1;
+    --primary-500: #fbfaf8;
+    --primary-300: #e7deed;
+    --primary-100: #804e49;
 
     --secondary-900: #000000;
     --secondary-700: #242424;
     --secondary-500: #4b4b4b;
+
+    --tertiary-900: #ffffff;
 }
 
 *{
@@ -20,7 +22,7 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: var(--primary-100);
+    background-color: var(--primary-500);
 }
 
 main{
@@ -46,7 +48,7 @@ main{
     inline-size: 100%;
     padding: 10px 40px;
     background-color: var(--secondary-900);
-    color: var(--primary-100);
+    color: var(--tertiary-900);
     outline: none;
     border: none;
     border-radius: 10px;
@@ -68,7 +70,7 @@ main{
     inset-inline-start: 0;
     inset-block-start: 0;
     background: linear-gradient(to bottom, #182848ef 0%, #18284896 100%);
-    backdrop-filter: blur(2px); 
+    backdrop-filter: blur(0.5px); 
     pointer-events: none;
 }
 
@@ -87,6 +89,48 @@ main{
     inset-block-start: 50%;
     translate: -50% -50%;
     z-index: 2;
-    color: var(--primary-100);
+    color: var(--tertiary-900);
     font-size: clamp(2.5rem, 2.0833rem + 2.0833vw, 3.75rem);
+    line-height: 1.2;
+}
+
+.about{
+    max-inline-size: 1280px;
+    inline-size: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items: center;
+    padding-block: 5rem;
+}
+
+.about-me .about-heading{
+    inline-size: 100%;
+    max-inline-size: 420px;
+    font-size: clamp(1.875rem, 1.6667rem + 1.0417vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.about-me .description{
+    inline-size: 100%;
+    max-inline-size: 500px;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-block: 1.5rem;
+}
+
+.about article img{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    image-rendering: optimizeSpeed;
+    -webkit-transition: scale 0.5s ease;
+    -moz-transition: scale 0.5s ease;
+    -o-transition: scale 0.5s ease;
+    transition: scale 0.5s ease;
+}
+
+
+.about article img:hover {
+    scale: 1.05;
 }
